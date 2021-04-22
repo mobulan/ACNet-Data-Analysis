@@ -1,0 +1,46 @@
+2021-04-22 07:03:36,805 train INFO: 
+
+Start training with pytorch version 1.8.1+cu111
+2021-04-22 07:03:36,860 train INFO: num of params in hdf5=10970186
+2021-04-22 07:04:07,120 train INFO: val at epoch 0   , top1 = 10.07000 , top5 = 49.97000 , loss = 2.303731
+2021-04-22 07:09:15,964 train INFO: val at epoch 0   , top1 = 48.59000 , top5 = 92.51000 , loss = 1.545751
+2021-04-22 07:33:03,202 train INFO: val at epoch 5   , top1 = 75.58000 , top5 = 98.36000 , loss = 0.730199
+2021-04-22 07:56:36,332 train INFO: val at epoch 10  , top1 = 74.85000 , top5 = 98.00000 , loss = 0.798429
+2021-04-22 08:20:09,422 train INFO: val at epoch 15  , top1 = 80.39000 , top5 = 99.14000 , loss = 0.641394
+2021-04-22 08:43:42,872 train INFO: val at epoch 20  , top1 = 83.94000 , top5 = 99.03000 , loss = 0.487268
+2021-04-22 09:07:15,944 train INFO: val at epoch 25  , top1 = 80.22000 , top5 = 99.15000 , loss = 0.597833
+2021-04-22 09:30:49,141 train INFO: val at epoch 30  , top1 = 80.86000 , top5 = 98.72000 , loss = 0.650812
+2021-04-22 09:54:22,377 train INFO: val at epoch 35  , top1 = 82.12000 , top5 = 99.23000 , loss = 0.568125
+2021-04-22 10:17:55,377 train INFO: val at epoch 40  , top1 = 77.71000 , top5 = 98.97000 , loss = 0.716148
+2021-04-22 10:41:28,620 train INFO: val at epoch 45  , top1 = 86.53000 , top5 = 99.49000 , loss = 0.416855
+2021-04-22 11:05:01,901 train INFO: val at epoch 50  , top1 = 85.81000 , top5 = 99.49000 , loss = 0.439636
+2021-04-22 11:28:35,096 train INFO: val at epoch 55  , top1 = 85.52000 , top5 = 99.48000 , loss = 0.459081
+2021-04-22 11:52:08,418 train INFO: val at epoch 60  , top1 = 86.95000 , top5 = 99.31000 , loss = 0.433029
+2021-04-22 12:15:41,785 train INFO: val at epoch 65  , top1 = 88.34000 , top5 = 99.59000 , loss = 0.369568
+2021-04-22 12:39:15,155 train INFO: val at epoch 70  , top1 = 88.85000 , top5 = 99.63000 , loss = 0.341115
+2021-04-22 13:02:48,374 train INFO: val at epoch 75  , top1 = 88.47000 , top5 = 99.57000 , loss = 0.390921
+2021-04-22 13:26:21,697 train INFO: val at epoch 80  , top1 = 90.27000 , top5 = 99.76000 , loss = 0.307886
+2021-04-22 13:49:55,188 train INFO: val at epoch 85  , top1 = 90.30000 , top5 = 99.52000 , loss = 0.324868
+2021-04-22 14:13:28,347 train INFO: val at epoch 90  , top1 = 88.69000 , top5 = 99.62000 , loss = 0.382946
+2021-04-22 14:37:01,506 train INFO: val at epoch 95  , top1 = 90.27000 , top5 = 99.70000 , loss = 0.333503
+2021-04-22 15:00:38,564 train INFO: val at epoch 100 , top1 = 91.36000 , top5 = 99.70000 , loss = 0.291950
+2021-04-22 15:24:39,157 train INFO: val at epoch 105 , top1 = 92.31000 , top5 = 99.70000 , loss = 0.262345
+2021-04-22 15:48:39,089 train INFO: val at epoch 110 , top1 = 93.69000 , top5 = 99.71000 , loss = 0.227884
+2021-04-22 16:12:39,097 train INFO: val at epoch 115 , top1 = 94.82000 , top5 = 99.83000 , loss = 0.189420
+2021-04-22 16:36:39,404 train INFO: val at epoch 120 , top1 = 95.37000 , top5 = 99.76000 , loss = 0.162700
+2021-04-22 17:00:39,926 train INFO: val at epoch 125 , top1 = 95.74000 , top5 = 99.80000 , loss = 0.151220
+2021-04-22 17:24:40,386 train INFO: val at epoch 130 , top1 = 95.80000 , top5 = 99.83000 , loss = 0.145462
+2021-04-22 17:48:39,455 train INFO: val at epoch 135 , top1 = 95.59000 , top5 = 99.83000 , loss = 0.146446
+2021-04-22 18:12:12,562 train INFO: val at epoch 140 , top1 = 95.70000 , top5 = 99.84000 , loss = 0.144071
+2021-04-22 18:17:13,283 train INFO: val at epoch 141 , top1 = 95.80000 , top5 = 99.85000 , loss = 0.143900
+2021-04-22 18:22:14,006 train INFO: val at epoch 142 , top1 = 95.71000 , top5 = 99.83000 , loss = 0.144870
+2021-04-22 18:27:14,759 train INFO: val at epoch 143 , top1 = 95.73000 , top5 = 99.82000 , loss = 0.145375
+2021-04-22 18:32:18,561 train INFO: val at epoch 144 , top1 = 95.69000 , top5 = 99.80000 , loss = 0.145000
+2021-04-22 18:37:25,438 train INFO: val at epoch 145 , top1 = 95.74000 , top5 = 99.81000 , loss = 0.144984
+2021-04-22 18:42:31,812 train INFO: val at epoch 146 , top1 = 95.69000 , top5 = 99.83000 , loss = 0.145452
+2021-04-22 18:47:38,317 train INFO: val at epoch 147 , top1 = 95.71000 , top5 = 99.84000 , loss = 0.145139
+2021-04-22 18:52:44,703 train INFO: val at epoch 148 , top1 = 95.59000 , top5 = 99.80000 , loss = 0.145748
+2021-04-22 18:57:51,262 train INFO: val at epoch 149 , top1 = 95.76000 , top5 = 99.83000 , loss = 0.144687
+2021-04-22 18:57:51,263 train INFO: TRAIN speed: from 5850 to 11700 iterations, batch_size=128, examples=748672, total_net_time=57.1931, examples/sec=13090.252967660143
+2021-04-22 18:57:51,316 train INFO: num of params in hdf5=10970186
+2021-04-22 18:57:51,319 train INFO: TRAIN LOSS collected over last 3 epochs: 0.001965

@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
 def label_rectify(data):
 	data[1:-10] += 5
 	data[-10:] += 1
@@ -31,14 +32,14 @@ def data_preparation(file):
 	return data.T
 
 
-PROJECT_ROOT_DIR = "."
+root_dir = "."
 Folder = "diagram"
-IMAGES_PATH = os.path.join(PROJECT_ROOT_DIR, Folder)
-os.makedirs(IMAGES_PATH, exist_ok=True)
+images = os.path.join(root_dir, Folder)
+os.makedirs(images, exist_ok=True)
 
 
 def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=300):
-	path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
+	path = os.path.join(images, fig_id + "." + fig_extension)
 	print("Saving figure", fig_id)
 	if tight_layout:
 		plt.tight_layout()
