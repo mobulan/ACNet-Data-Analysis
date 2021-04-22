@@ -1,5 +1,3 @@
-import pandas as pd
-
 from data_processing import *
 
 # Cifar-quick data
@@ -37,9 +35,9 @@ fig, ax = plt.subplots()
 # Top-1 准确率
 
 plt.axis([0, 150, 0, 100])
-ax.plot(cifarquick_base['epoch'], cifarquick_base['top1'], color='peru', linestyle='--', label="cifar-quick_base")
 ax.plot(cifarquick_acb['epoch'], cifarquick_acb['top1'], '--', label="cifar-quick_acb")
 ax.plot(vgg_acb['epoch'], vgg_acb['top1'], color='g', linestyle='--', label="VGG_acb")
+ax.plot(res56_acb['epoch'], res56_acb['top1'], color='peru', linestyle='--', label="cifar-quick_base")
 ax.set_title("Top-1 Accuracy", fontsize=16)
 plt.ylabel("Accuracy", fontsize=12)
 plt.xlabel("Epoch", fontsize=12)
@@ -50,9 +48,9 @@ fig.show()
 # Top-5 准确率
 fig, ax = plt.subplots()
 plt.axis([0, 150, 50, 100])
-ax.plot(cifarquick_base['epoch'], cifarquick_base['top5'], color='peru', linestyle='--', label="base_top5")
 ax.plot(cifarquick_acb['epoch'], cifarquick_acb['top5'], '--', label="acb_top5")
 ax.plot(vgg_acb['epoch'], vgg_acb['top5'], color='g', linestyle='--', label="VGG_acb")
+ax.plot(res56_acb['epoch'], res56_acb['top5'], color='peru', linestyle='--', label="base_top5")
 ax.set_title("Top-5 Accuracy", fontsize=16)
 plt.xlabel("Epoch", fontsize=12)
 plt.legend(loc='best')
@@ -62,9 +60,9 @@ fig.show()
 # 损失曲线
 fig, ax = plt.subplots()
 plt.axis([0, 150, 0, 3])
-ax.plot(cifarquick_base['epoch'], cifarquick_base['loss'], color='peru', linestyle='--', label="base_loss")
 ax.plot(cifarquick_acb['epoch'], cifarquick_acb['loss'], color='steelblue', linestyle='--', label="acb_loss")
 ax.plot(vgg_acb['epoch'], vgg_acb['loss'], color='g', linestyle='--', label="VGG_acb")
+ax.plot(res56_acb['epoch'], res56_acb['loss'], color='peru', linestyle='--', label="base_loss")
 ax.set_title("Loss", fontsize=16)
 plt.xlabel("Epoch", fontsize=12)
 plt.ylabel("Loss", fontsize=12)
@@ -79,7 +77,7 @@ train_time = [17.8155, 34.1450, 46.97, 124.25, 171.24, 910.2]
 time_increase = [(train_time[1] / train_time[0] - 1) * 100, (train_time[3] / train_time[2] - 1) * 100,
                  (train_time[5] / train_time[4] - 1) * 100]
 ax.bar(models_3, time_increase, color=['peru', 'steelblue', 'rebeccapurple'])
-ax.set_title('Training time increse by using acb', fontsize=16)
+ax.set_title('Training Time Increse by using acb', fontsize=16)
 plt.ylabel('incrasing rate', fontsize=12)
 # 添加数值标签
 for a, b in zip(models_3, time_increase):
@@ -105,28 +103,14 @@ for i in data:
 acb_accuracy.append(np.nan)
 x = np.arange(len(models))
 width = 0.4
-rec1 = ax.bar(x - width / 2, base_accuracy, width, label='base',color = 'steelblue')
-rec2 = ax.bar(x + width / 2, acb_accuracy, width, label='acb',color = 'peru')
+rec1 = ax.bar(x - width / 2, base_accuracy, width, label='base')
+rec2 = ax.bar(x + width / 2, acb_accuracy, width, label='acb')
 plt.ylim(70)
 ax.set_title('Final Top-1 Accuarcy', fontsize=16)
 ax.set_xticks(x)
 ax.set_xticklabels(models)
-
-
-def autolabel(rects):
-	"""Attach a text label above each bar in *rects*, displaying its height."""
-	for rect in rects:
-		height = rect.get_height()
-		ax.annotate('{}'.format(height),
-		xy=(rect.get_x() + rect.get_width() / 2, height),
-		xytext=(0, 3),  # 3 points vertical offset
-		textcoords="offset points",
-		ha='center', va='bottom')
-
-
-autolabel(rec1)
-autolabel(rec2)
-
+autolabel(rec1,ax)
+autolabel(rec2,ax)
 ax.legend()
 save_fig('Final Top-1 Accuracy')
 fig.show()

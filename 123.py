@@ -22,6 +22,7 @@ ax.set(ylim=(300, 370))
 ax.set_xticklabels(labels)
 ax.legend()
 
+fig, ax = plt.subplots()
 def autolabel(rects):
     """Attach a text label above each bar in *rects*, displaying its height."""
     for rect in rects:

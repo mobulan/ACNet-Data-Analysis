@@ -31,6 +31,15 @@ def data_preparation(file):
 	data = pd.DataFrame(data=data, index=['epoch', 'top1', 'top5', 'loss'])
 	return data.T
 
+def autolabel(rects,ax):
+	"""Attach a text label above each bar in *rects*, displaying its height."""
+	for rect in rects:
+		height = rect.get_height()
+		ax.annotate('{}'.format(height)+'%',
+		xy=(rect.get_x() + rect.get_width() / 2, height),
+		xytext=(0, 3),  # 3 points vertical offset
+		textcoords="offset points",
+		ha='center', va='bottom')
 
 root_dir = "."
 Folder = "diagram"
