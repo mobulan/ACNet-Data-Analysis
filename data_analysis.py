@@ -17,7 +17,7 @@ data = [base_train_data, acb_train_data, vgg_acb_data]
 plt.figure(figsize=(8, 5))
 
 # Top-1 准确率
-plt.subplot(111)
+
 plt.xlim(0, 150)
 plt.ylim(0, 100)
 plt.plot(base_train_data['epoch'], base_train_data['top1'], color='peru', linestyle='--', label="cifar-quick_base")
@@ -31,7 +31,7 @@ save_fig('Top-1 Accuracy')
 plt.show()
 
 # Top-5 准确率
-plt.subplot(111)
+
 plt.xlim(0, 150)
 plt.ylim(50, 100)
 plt.plot(base_train_data['epoch'], base_train_data['top5'], color='peru', linestyle='--', label="base_top5")
@@ -44,7 +44,7 @@ save_fig('Top-5 Accuracy')
 plt.show()
 
 # 损失曲线
-plt.subplot(111)
+
 plt.xlim(0, 150)
 plt.ylim(0, 3)
 plt.plot(base_train_data['epoch'], base_train_data['loss'], color='peru', linestyle='--', label="base_loss")
@@ -58,7 +58,7 @@ save_fig('Loss')
 plt.show()
 
 # 训练时间增加比率
-plt.subplot(111)
+
 train_time = [17.8155, 34.1450, 96.5, 209.2651]
 time_increase = [(train_time[1] / train_time[0] - 1) * 100, (train_time[3] / train_time[2] - 1) * 100]
 plt.bar(models, time_increase)
@@ -71,7 +71,7 @@ save_fig('Training time increse')
 plt.show()
 
 # 最后Top-1准确率
-plt.subplot(111)
+
 final_accuracy = []
 for i in data:
 	final_accuracy.append(i.iloc[-1,i.columns.get_loc('top1')])
@@ -85,7 +85,7 @@ save_fig('Final Top-1 Accuracy')
 plt.show()
 
 # 使用ACB后准确率提升率
-plt.subplot(111)
+
 acc_increase = (final_accuracy[1]-final_accuracy[0],final_accuracy[2]-94)
 plt.bar(models, acc_increase)
 for a,b in zip(models, acc_increase):
