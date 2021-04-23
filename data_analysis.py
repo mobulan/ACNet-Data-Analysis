@@ -30,14 +30,15 @@ data = [cifarquick_base, cifarquick_acb, vgg_base, vgg_acb, res56_base, res56_ac
 
 # 图像尺寸
 plt.figure(figsize=(8, 5))
-fig, ax = plt.subplots()
+
 
 # Top-1 准确率
-
+fig, ax = plt.subplots()
 plt.axis([0, 150, 0, 100])
-ax.plot(cifarquick_acb['epoch'], cifarquick_acb['top1'], '--', label="cifar-quick_acb")
-ax.plot(vgg_acb['epoch'], vgg_acb['top1'], color='g', linestyle='--', label="VGG_acb")
-ax.plot(res56_acb['epoch'], res56_acb['top1'], color='peru', linestyle='--', label="cifar-quick_base")
+ax.plot(cifarquick_acb['epoch'], cifarquick_acb['top1'], color='peru', linestyle='--', label="Cifar-quick_acb")
+ax.plot(vgg_acb['epoch'], vgg_acb['top1'], color='steelblue', linestyle='--', label="VGG_acb")
+ax.plot(res56_acb['epoch'], res56_acb['top1'], color='rebeccapurple', linestyle='--', label="ResNet-56_acb")
+ax.plot(wrn16_base['epoch'], wrn16_base['top1'], color='g', linestyle='--', label="WRN-16_base")
 ax.set_title("Top-1 Accuracy", fontsize=16)
 plt.ylabel("Accuracy", fontsize=12)
 plt.xlabel("Epoch", fontsize=12)
@@ -48,9 +49,10 @@ fig.show()
 # Top-5 准确率
 fig, ax = plt.subplots()
 plt.axis([0, 150, 50, 100])
-ax.plot(cifarquick_acb['epoch'], cifarquick_acb['top5'], '--', label="acb_top5")
-ax.plot(vgg_acb['epoch'], vgg_acb['top5'], color='g', linestyle='--', label="VGG_acb")
-ax.plot(res56_acb['epoch'], res56_acb['top5'], color='peru', linestyle='--', label="base_top5")
+ax.plot(cifarquick_acb['epoch'], cifarquick_acb['top5'],color='peru', linestyle='--',label="Cifar-quick_acb")
+ax.plot(vgg_acb['epoch'], vgg_acb['top5'], color='steelblue', linestyle='--', label="VGG_acb")
+ax.plot(res56_acb['epoch'], res56_acb['top5'], color='rebeccapurple', linestyle='--', label="ResNet-56_acb")
+ax.plot(wrn16_base['epoch'], wrn16_base['top5'], color='g', linestyle='--', label="WRN-16_base")
 ax.set_title("Top-5 Accuracy", fontsize=16)
 plt.xlabel("Epoch", fontsize=12)
 plt.legend(loc='best')
@@ -60,9 +62,10 @@ fig.show()
 # 损失曲线
 fig, ax = plt.subplots()
 plt.axis([0, 150, 0, 3])
-ax.plot(cifarquick_acb['epoch'], cifarquick_acb['loss'], color='steelblue', linestyle='--', label="acb_loss")
-ax.plot(vgg_acb['epoch'], vgg_acb['loss'], color='g', linestyle='--', label="VGG_acb")
-ax.plot(res56_acb['epoch'], res56_acb['loss'], color='peru', linestyle='--', label="base_loss")
+ax.plot(cifarquick_acb['epoch'], cifarquick_acb['loss'], color='peru', linestyle='--', label="Cifar-quick_acb")
+ax.plot(vgg_acb['epoch'], vgg_acb['loss'], color='steelblue', linestyle='--', label="VGG_acb")
+ax.plot(res56_acb['epoch'], res56_acb['loss'], color='rebeccapurple', linestyle='--', label="ResNet-56_acb")
+ax.plot(wrn16_base['epoch'], wrn16_base['loss'], color='g', linestyle='--', label="WRN-16_base")
 ax.set_title("Loss", fontsize=16)
 plt.xlabel("Epoch", fontsize=12)
 plt.ylabel("Loss", fontsize=12)
