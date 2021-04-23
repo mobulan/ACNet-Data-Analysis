@@ -55,6 +55,7 @@ ax.plot(res56_acb['epoch'], res56_acb['top5'], color='rebeccapurple', linestyle=
 ax.plot(wrn16_base['epoch'], wrn16_base['top5'], color='g', linestyle='--', label="WRN-16_base")
 ax.set_title("Top-5 Accuracy", fontsize=16)
 plt.xlabel("Epoch", fontsize=12)
+plt.ylabel("Accuracy", fontsize=12)
 plt.legend(loc='best')
 save_fig('Top-5 Accuracy')
 fig.show()
